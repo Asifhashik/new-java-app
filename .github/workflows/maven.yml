@@ -16,7 +16,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: X64
 
     steps:
     - uses: actions/checkout@v4
@@ -28,6 +28,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: displaying jar file
-      run: ls target/*.jar
+    - name: display floder
+      run: pwd
 
