@@ -13,7 +13,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch: 
 env:
-  hai: hello workflow  
+  hai: 123456 
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      hai_build: hello build
+      hai_build: pooi
 
     steps:
     - uses: actions/checkout@v4
