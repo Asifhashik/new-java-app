@@ -12,11 +12,16 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch: 
+env:
+  hai: hello workflow  
 
 jobs:
   build:
+     
 
     runs-on: X64
+    env:
+      hai_build: hello build
 
     steps:
     - uses: actions/checkout@v4
@@ -30,4 +35,6 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: display floder
       run: pwd
-
+    - name: print enving
+      run: echo "hello from ${{hai}}"
+      run: echo "hello from ${{hai_build}}"
