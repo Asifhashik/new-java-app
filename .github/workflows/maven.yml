@@ -19,7 +19,7 @@ jobs:
   build:
      
 
-    runs-on: X64
+    runs-on: ubuntu-latest
     env:
       hai_build: hello build
 
@@ -36,5 +36,6 @@ jobs:
     - name: display floder
       run: pwd
     - name: print enving
-      run: echo "hello from ${{hai}}"
-      run: echo "hello from ${{hai_build}}"
+      run: echo "hello from ${{env.hai}}"
+    - name: print new
+      run: echo "hello from ${{env.hai_build}}"
