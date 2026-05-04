@@ -40,4 +40,4 @@ jobs:
     - name: print new
       run: echo "hello from ${{env.hai_build}}"
     - name: from repo
-      run : echo "$env.vars.NUMBER"
+      run : echo " from repo ${{vars.NUMBER}}"
